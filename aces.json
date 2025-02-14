@@ -1,0 +1,279 @@
+{
+    "configuration": {
+        "conditions": [
+        ],
+        "actions": [
+            {
+                "c2id": 0,
+                "id": "addavailablecustomdimension01",
+                "scriptName": "addAvailableCustomDimension01",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 1,
+                "id": "addavailablecustomdimension02",
+                "scriptName": "addAvailableCustomDimension02",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 2,
+                "id": "addavailablecustomdimension03",
+                "scriptName": "addAvailableCustomDimension03",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 3,
+                "id": "addavailableresourcecurrency",
+                "scriptName": "addAvailableResourceCurrency",
+                "highlight": false,
+                "params": [
+                    {"id":"currency", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 4,
+                "id": "addavailableresourceitemtype",
+                "scriptName": "addAvailableResourceItemType",
+                "highlight": false,
+                "params": [
+                    {"id":"item_type", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 24,
+                "id": "configurebuild",
+                "scriptName": "configureBuild",
+                "highlight": false,
+                "params": [
+                    {"id":"build", "type":"string"}
+                ]
+            }
+        ],
+        "expressions": [
+        ]
+    },
+    "initialization": {
+        "conditions": [
+        ],
+        "actions": [
+            {
+                "c2id": 5,
+                "id": "initialize",
+                "scriptName": "initialize",
+                "highlight": false
+            }
+        ],
+        "expressions": [
+        ]
+    },
+    "events": {
+        "conditions": [
+        ],
+        "actions": [
+            {
+                "c2id": 6,
+                "id": "addbusinessevent",
+                "scriptName": "addBusinessEvent",
+                "highlight": false,
+                "params": [
+                    {"id":"currency", "type":"string"},
+                    {"id":"amount", "type":"number"},
+                    {"id":"item_type", "type":"string"},
+                    {"id":"item_id", "type":"string"},
+                    {"id":"cart_type", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 7,
+                "id": "addresourceevent",
+                "scriptName": "addResourceEvent",
+                "highlight": false,
+                "params": [
+                    {"id":"flow_type", "type":"combo", "items":["undefined","source","sink"]},
+                    {"id":"currency", "type":"string"},
+                    {"id":"amount", "type":"number"},
+                    {"id":"item_type", "type":"string"},
+                    {"id":"item_id", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 8,
+                "id": "addprogressionevent",
+                "scriptName": "addProgressionEvent",
+                "highlight": false,
+                "params": [
+                    {"id":"progression_status", "type":"combo", "items":["undefined","start","complete","fail"]},
+                    {"id":"progression_01", "type":"string"},
+                    {"id":"progression_02", "type":"string"},
+                    {"id":"progression_03", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 9,
+                "id": "addprogressioneventwithscore",
+                "scriptName": "addProgressionEventWithScore",
+                "highlight": false,
+                "params": [
+                    {"id":"progression_status", "type":"combo", "items":["undefined","start","complete","fail"]},
+                    {"id":"progression_01", "type":"string"},
+                    {"id":"progression_02", "type":"string"},
+                    {"id":"progression_03", "type":"string"},
+                    {"id":"score", "type":"number"}
+                ]
+            },
+            {
+                "c2id": 10,
+                "id": "adddesignevent",
+                "scriptName": "addDesignEvent",
+                "highlight": false,
+                "params": [
+                    {"id":"event_id", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 11,
+                "id": "adddesigneventwithvalue",
+                "scriptName": "addDesignEventWithValue",
+                "highlight": false,
+                "params": [
+                    {"id":"event_id", "type":"string"},
+                    {"id":"value", "type":"number"}
+                ]
+            },
+            {
+                "c2id": 12,
+                "id": "adderrorevent",
+                "scriptName": "addErrorEvent",
+                "highlight": false,
+                "params": [
+                    {"id":"severity", "type":"combo", "items":["undefined","debug","info","warning","error","critical"]},
+                    {"id":"message", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 13,
+                "id": "setenabledeventsubmission",
+                "scriptName": "setEnabledEventSubmission",
+                "highlight": false,
+                "params": [
+                    {"id":"flag", "type":"combo", "items":["false","true"]}
+                ]
+            }
+        ],
+        "expressions": [
+        ]
+    },
+    "sessions": {
+        "conditions": [
+        ],
+        "actions": [
+            {
+                "c2id": 15,
+                "id": "setenabledmanualsessionhandling",
+                "scriptName": "setEnabledManualSessionHandling",
+                "highlight": false,
+                "params": [
+                    {"id":"flag", "type":"combo", "items":["false","true"]}
+                ]
+            },
+            {
+                "c2id": 22,
+                "id": "startsession",
+                "scriptName": "startSession",
+                "highlight": false
+            },
+            {
+                "c2id": 23,
+                "id": "endsession",
+                "scriptName": "endSession",
+                "highlight": false
+            }
+        ],
+        "expressions": [
+        ]
+    },
+    "dimensions": {
+        "conditions": [
+        ],
+        "actions": [
+            {
+                "c2id": 16,
+                "id": "setcustomdimension01",
+                "scriptName": "setCustomDimension01",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 17,
+                "id": "setcustomdimension02",
+                "scriptName": "setCustomDimension02",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 18,
+                "id": "setcustomdimension03",
+                "scriptName": "setCustomDimension03",
+                "highlight": false,
+                "params": [
+                    {"id":"dimension", "type":"string"}
+                ]
+            }
+        ],
+        "expressions": [
+        ]
+    },
+    "remote-configs": {
+        "conditions": [
+            {
+                "c2id": 0,
+                "id": "isremoteconfigsready",
+                "scriptName": "isRemoteConfigsReady",
+                "highlight": false,
+                "isTrigger": false,
+                "params": [
+                    {"id":"function_name", "type":"string"}
+                ]
+            }
+        ],
+        "actions": [
+        ],
+        "expressions": [
+            {
+                "c2id": 0,
+                "id": "getremoteconfigsvalueasstring",
+                "expressionName": "getRemoteConfigsValueAsString",
+                "returnType": "string",
+                "isVariadicParameters": false,
+                "params": [
+                    {"id":"key", "type":"string"},
+                    {"id":"default_value", "type":"string"},
+                    {"id":"function_name", "type":"string"}
+                ]
+            },
+            {
+                "c2id": 1,
+                "id": "getremoteconfigscontentasstring",
+                "expressionName": "getRemoteConfigsContentAsString",
+                "returnType": "string",
+                "isVariadicParameters": false,
+                "params": [
+                    {"id":"function_name", "type":"string"}
+                ]
+            }
+        ]
+    }
+}

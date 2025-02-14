@@ -1,0 +1,36 @@
+{
+  "is-c3-addon": true,
+  "sdk-version": 2,
+  "min-construct-version": "r401",
+  "type": "plugin",
+  "name": "GameAnalytics",
+  "id": "GameAnalytics",
+  "version": "3.0.13",
+  "author": "GameAnalytics",
+  "website": "https://gameanalytics.com/",
+  "documentation": "https://gameanalytics.com/docs/construct-sdk",
+  "description": "GameAnalytics is a free analytics platform that helps game developers understand their players' behaviour by delivering relevant insights.",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/main.js",
+    "GameAnalytics.js",
+    "c2runtime/runtime.js",
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.svg",
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ]
+}

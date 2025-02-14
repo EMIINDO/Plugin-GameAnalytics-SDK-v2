@@ -1,0 +1,295 @@
+{
+    "languageTag": "en-US",
+    "fileDescription": "GameAnalytics is a free analytics platform that helps game developers understand their players' behaviour by delivering relevant insights.",
+    "text": {
+        "plugins": {
+            "gameanalytics": {
+                "name": "GameAnalytics",
+                "description": "GameAnalytics is a free analytics platform that helps game developers understand their players' behaviour by delivering relevant insights.",
+                "help-url": "https://gameanalytics.com/docs/construct-sdk",
+                "properties": {
+                    "build": {
+                        "name": "Build",
+                        "desc": "Build version of the game."
+                    },
+                    "custom-user-id": {
+                        "name": "Custom user ID",
+                        "desc": "Custom user ID. Leave empty if not used."
+                    },
+                    "enable-manual-session-handling": {
+                        "name": "Enable manual session handling",
+                        "desc": "Enable/disable manual session handling",
+                        "items": {
+                            "false":"False",
+                            "true":"True"
+                        }
+                    },
+                    "enable-info-log": {
+                        "name": "Enable info log",
+                        "desc": "Enable/disable info log",
+                        "items": {
+                            "false":"False",
+                            "true":"True"
+                        }
+                    },
+                    "enable-verbose-log": {
+                        "name": "Auto detect app version (only cordova export)",
+                        "desc": "Auto detect app version for build field (only cordova export)",
+                        "items": {
+                            "false":"False",
+                            "true":"True"
+                        }
+                    },
+                    "auto-detect-app-version": {
+                        "name": "Enable verbose log",
+                        "desc": "Enable/disable verbose log",
+                        "items": {
+                            "false":"False",
+                            "true":"True"
+                        }
+                    },
+                    "game-key-browser": {
+                        "name": "Game key (browser)",
+                        "desc": "Game key of the game for brower platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    },
+                    "secret-key-browser": {
+                        "name": "Secret key (browser)",
+                        "desc": "Secret key of the game for brower platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    },
+                    "game-key-android": {
+                        "name": "Game key (android)",
+                        "desc": "Game key of the game for Android platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    },
+                    "secret-key-android": {
+                        "name": "Secret key (android)",
+                        "desc": "Secret key of the game for Android platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    },
+                    "game-key-ios": {
+                        "name": "Game key (ios)",
+                        "desc": "Game key of the game for iOS platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    },
+                    "secret-key-ios": {
+                        "name": "Secret key (ios)",
+                        "desc": "Secret key of the game for iOS platform. It can found when you log in with your account credentials on https://go.gameanalytics.com."
+                    }
+                },
+                "aceCategories": {
+                    "configuration": "Configuration",
+                    "initialization": "Initialization",
+                    "events": "Events",
+                    "sessions": "Sessions",
+                    "dimensions": "Dimensions",
+                    "social-media": "Social Media",
+                    "personal-data": "Personal Data",
+                    "remote-configs": "Remote Configs"
+                },
+                "conditions": {
+                    "isremoteconfigsready": {
+                        "list-name": "Is RC ready?",
+                        "display-text": "Is RC ready? (callback={0})",
+                        "description": "Checks if the remote configs is ready or not.",
+                        "params": {
+                            "function_name": { "name":"Function name", "desc":"Enter name of callback function (only for Cordova export)."}
+                        }
+                    }
+                },
+                "actions": {
+                    "addavailablecustomdimension01": {
+                        "list-name": "Add dimension to 01 dimensions",
+                        "display-text": "Add {0} to available custom 01 dimensions",
+                        "description": "Add dimension to available custom 01 dimensions. Must be called before initializing SDK.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter dimension to add to available custom 01 dimensions."}
+                        }
+                    },
+                    "addavailablecustomdimension02": {
+                        "list-name": "Add dimension to 02 dimensions",
+                        "display-text": "Add {0} to available custom 02 dimensions",
+                        "description": "Add dimension to available custom 02 dimensions. Must be called before initializing SDK.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter dimension to add to available custom 02 dimensions."}
+                        }
+                    },
+                    "addavailablecustomdimension03": {
+                        "list-name": "Add dimension to 03 dimensions",
+                        "display-text": "Add {0} to available custom 03 dimensions",
+                        "description": "Add dimension to available custom 03 dimensions. Must be called before initializing SDK.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter dimension to add to available custom 03 dimensions."}
+                        }
+                    },
+                    "addavailableresourcecurrency": {
+                        "list-name": "Add currency to currencies",
+                        "display-text": "Add {0} to available resource currencies",
+                        "description": "Add currency to available resource currencies. Must be called before initializing SDK.",
+                        "params": {
+                            "currency": { "name":"Currency", "desc":"Enter currency to add to available resource currencies."}
+                        }
+                    },
+                    "addavailableresourceitemtype": {
+                        "list-name": "Add item type to item types",
+                        "display-text": "Add {0} to available resource item types",
+                        "description": "Add item type to available resource item types. Must be called before initializing SDK.",
+                        "params": {
+                            "item_type": { "name":"Item type", "desc":"Enter item type to add to available resource item types."}
+                        }
+                    },
+                    "initialize": {
+                        "list-name": "Initialize SDK",
+                        "display-text": "Initialize GA SDK",
+                        "description": "Initialize GA SDK."
+                    },
+                    "addbusinessevent": {
+                        "list-name": "Add business event",
+                        "display-text": "Add business event {0}:{1}:{2}:{3}:{4}",
+                        "description": "Add business event. Must first be called after initializing SDK.",
+                        "params": {
+                            "currency": { "name":"Currency", "desc":"Enter currency."},
+                            "amount": { "name":"Amount", "desc":"Enter amount in cents."},
+                            "item_type": { "name":"Item type", "desc":"Enter item type."},
+                            "item_id": { "name":"Item id", "desc":"Enter item id."},
+                            "cart_type": { "name":"Cart type", "desc":"Enter cart type (this specifies where the purchase took place for example in-game or in shop)."}
+                        }
+                    },
+                    "addresourceevent": {
+                        "list-name": "Add resource event",
+                        "display-text": "Add resource event {0}:{1}:{2}:{3}:{4}",
+                        "description": "Add resource event. Must first be called after initializing SDK.",
+                        "params": {
+                            "flow_type": { "name":"Flow type", "desc":"Enter flow type. Source is 'add' and Sink is 'substract'.", "items":{"undefined":"Undefined","source":"Source","sink":"Sink"}},
+                            "currency": { "name":"Currency", "desc":"Enter resource currency (must be one from list of available resource currencies defined)."},
+                            "amount": { "name":"Amount", "desc":"Enter amount."},
+                            "item_type": { "name":"Item type", "desc":"Enter item type (must be one from list of available resource item types)."},
+                            "item_id": { "name":"Item id", "desc":"Enter item id."}
+                        }
+                    },
+                    "addprogressionevent": {
+                        "list-name": "Add progression event",
+                        "display-text": "Add progression event {0}:{1}:{2}:{3}",
+                        "description": "Add progression event. Must first be called after initializing SDK.",
+                        "params": {
+                            "progression_status": { "name":"Progression status", "desc":"Enter progression status.", "items":{"undefined":"Undefined","start":"Start","complete":"Complete","fail":"Fail"}},
+                            "progression_01": { "name":"Progression 01", "desc":"Enter progression 01."},
+                            "progression_02": { "name":"Progression 02", "desc":"Enter progression 02 (leave empty if not required)."},
+                            "progression_03": { "name":"Progression 03", "desc":"Enter progression 03 (leave empty if not required)."}
+                        }
+                    },
+                    "addprogressioneventwithscore": {
+                        "list-name": "Add progression event with score",
+                        "display-text": "Add progression event {0}:{1}:{2}:{3}:{4}",
+                        "description": "Add progression event with score. Must first be called after initializing SDK.",
+                        "params": {
+                            "progression_status": { "name":"Progression status", "desc":"Enter progression status.", "items":{"undefined":"Undefined","start":"Start","complete":"Complete","fail":"Fail"}},
+                            "progression_01": { "name":"Progression 01", "desc":"Enter progression 01."},
+                            "progression_02": { "name":"Progression 02", "desc":"Enter progression 02 (leave empty if not required)."},
+                            "progression_03": { "name":"Progression 03", "desc":"Enter progression 03 (leave empty if not required)."},
+                            "score": { "name":"Score", "desc":"Enter score (only works with Complete or Fail progression status)."}
+                        }
+                    },
+                    "adddesignevent": {
+                        "list-name": "Add design event",
+                        "display-text": "Add design event {0}",
+                        "description": "Add design event. Must first be called after initializing SDK.",
+                        "params": {
+                            "event_id": { "name":"Event ID", "desc":"Enter event ID."}
+                        }
+                    },
+                    "adddesigneventwithvalue": {
+                        "list-name": "Add design event with value",
+                        "display-text": "Add design event with value {0}:{1}",
+                        "description": "Add design event with value. Must first be called after initializing SDK.",
+                        "params": {
+                            "event_id": { "name":"Event ID", "desc":"Enter event ID."},
+                            "value": { "name":"Value", "desc":"Enter value."}
+                        }
+                    },
+                    "adderrorevent": {
+                        "list-name": "Add error event",
+                        "display-text": "Add error event {0}:{1}",
+                        "description": "Add error event. Must first be called after initializing SDK.",
+                        "params": {
+                            "severity": { "name":"Severity", "desc":"Enter error severity.", "items":{"undefined":"Undefined","debug":"Debug","info":"Info","warning":"Warning","error":"Error","critical":"Critical"}},
+                            "message": { "name":"Message", "desc":"Enter error message."}
+                        }
+                    },
+                    "setenabledeventsubmission": {
+                        "list-name": "Toggle event submission",
+                        "display-text": "Event submission enabled set to {0}",
+                        "description": "Enable/disable event submission.",
+                        "params": {
+                            "flag": { "name":"Flag", "desc":"Enter True to enable and False to disable.", "items":{"false":"False","true":"True"}}
+                        }
+                    },
+                    "setenabledmanualsessionhandling": {
+                        "list-name": "Toggle manual session handling",
+                        "display-text": "Manual session handling enabled set to {0}",
+                        "description": "Enable/disable manual session handling.",
+                        "params": {
+                            "flag": { "name":"Flag", "desc":"Enter True to enable and False to disable.", "items":{"false":"False","true":"True"}}
+                        }
+                    },
+                    "setcustomdimension01": {
+                        "list-name": "Set current 01 dimension",
+                        "display-text": "Set current 01 dimension to {0}",
+                        "description": "Set current 01 dimension. Set to empty string to remove it.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter 01 dimension (must be one from list of available 01 dimensions defined). Set it to empty to reset to none."}
+                        }
+                    },
+                    "setcustomdimension02": {
+                        "list-name": "Set current 02 dimension",
+                        "display-text": "Set current 02 dimension to {0}",
+                        "description": "Set current 02 dimension. Set to empty string to remove it.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter 02 dimension (must be one from list of available 02 dimensions defined). Set it to empty to reset to none."}
+                        }
+                    },
+                    "setcustomdimension03": {
+                        "list-name": "Set current 03 dimension",
+                        "display-text": "Set current 03 dimension to {0}",
+                        "description": "Set current 03 dimension. Set to empty string to remove it.",
+                        "params": {
+                            "dimension": { "name":"Dimension", "desc":"Enter 03 dimension (must be one from list of available 03 dimensions defined). Set it to empty to reset to none."}
+                        }
+                    },
+                    "startsession": {
+                        "list-name": "Start new session",
+                        "display-text": "Start new session",
+                        "description": "Start new session (only works if manual session handling is enabled)."
+                    },
+                    "endsession": {
+                        "list-name": "End session",
+                        "display-text": "End session",
+                        "description": "End session (only works if manual session handling is enabled)."
+                    },
+                    "configurebuild": {
+                        "list-name": "Set build number",
+                        "display-text": "Set build number to {0}",
+                        "description": "Set build number (must be called before initializing the SDK).",
+                        "params": {
+                            "build": { "name":"Build number", "desc":"Enter build number"}
+                        }
+                    }
+                },
+                "expressions": {
+                    "getremoteconfigsvalueasstring": {
+                        "description": "Get remote configs value for the specified key or else return default value if the key is not present.",
+                        "translated-name": "getRemoteConfigsValueAsString",
+                        "params": {
+                            "key": { "name":"Remote configs ID", "desc":"Enter remote configs ID"},
+                            "default_value": { "name":"Remote configs default value", "desc":"Enter remote configs default value"},
+                            "function_name": { "name":"Function name", "desc":"Enter name of callback function (only for Cordova export)."}
+                        }
+                    },
+                    "getremoteconfigscontentasstring": {
+                        "description": "Return the remote configs contents as a string.",
+                        "translated-name": "getRemoteConfigsContentAsString",
+                        "params": {
+                            "function_name": { "name":"Function name", "desc":"Enter name of callback function (only for Cordova export)."}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
